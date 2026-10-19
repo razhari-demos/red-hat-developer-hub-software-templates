@@ -23,6 +23,7 @@ spec:
         orgName:
           title: Organization
           type: string
+          default: razhari-demos
         repoName:
           title: Repository
           type: string

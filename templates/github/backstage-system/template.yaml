@@ -24,6 +24,7 @@ spec:
         orgName:
           title: GitHub Organization
           type: string
+          default: razhari-demos
         repoName:
           title: Repository Name
           type: string
