@@ -1,18 +1,12 @@
-# GitHub Actions CI Method
+# CI/CD
 
-## Requirements
+No GitHub Actions workflows are included in this repository.
 
-The GitHub Actions CI Method will require repository secrets setup before GitHub Actions can run
+The upstream version of this skeleton ships a CI workflow (build + push to Quay.io)
+and an ArgoCD deployment workflow, both of which require infrastructure
+(a Quay registry and an OpenShift cluster) that this environment doesn't have
+configured. Rather than generate workflows that would fail on first push, they
+were removed here.
 
-SECRETS
-ArgoCD Secrets
-
-- `OPENSHIFT_SERVER` - The OpenShift server URL that you wish to deploy to using ArgoCD
-- `OPENSHIFT_TOKEN` - The token for the OpenShift cluster
-- `OPENSHIFT_NAMESPACE` - The namespace you wish to deploy to
-
-CI Secrets
-
-- `REGISTRY_NAMESPACE` - The Quay.io registry namespace you wish to push the image to ex. quay.io/<IMAGE_NAMESPACE>/<IMAGE_NAME>:Tag
-- `REGISTRY_USERNAME` - The Quay.io registry username for the bot
-- `REGISTRY_PASSWORD` - The Quay.io registry password for the bot
+To add them back, see the originals at:
+https://github.com/redhat-developer/red-hat-developer-hub-software-templates/tree/main/skeletons/github-actions/.github/workflows
